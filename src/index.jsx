@@ -46,7 +46,7 @@ function SelectItem({ arrayProps, selectImg, selectClass }) {
     let handler = (event) => {
       if (!refOutside.current.contains(event.target)) {
         const list = document.querySelector(`selectItem__${selectClass}__list`);
-        list.classList.add("hide");
+        list?.classList.add("hide");
         const arrow = document.querySelector(
           `.selectItem__${selectClass}__field--img`
         );
