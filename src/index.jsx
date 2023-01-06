@@ -42,24 +42,20 @@ function SelectItem({ arrayProps, selectImg, selectClass }) {
    * This feature allows you to click out of the component to close the list.
    */
 
-  if (list) {
-    useEffect(() => {
-      let handler = (event) => {
-        if (!refOutside.current.contains(event.target)) {
-          const list = document.querySelector(
-            `selectItem__${selectClass}__list`
-          );
-          list.classList.add("hide");
-          const arrow = document.querySelector(
-            `.selectItem__${selectClass}__field--img`
-          );
-          arrow.classList.remove("rotate");
-        }
-      };
-      document.addEventListener("mousedown", handler);
-      return () => document.removeEventListener("mousedown", handler);
-    });
-  }
+  useEffect(() => {
+    let handler = (event) => {
+      if (!refOutside.current.contains(event.target)) {
+        const list = document.querySelector(`selectItem__${selectClass}__list`);
+        list.classList.add("hide");
+        const arrow = document.querySelector(
+          `.selectItem__${selectClass}__field--img`
+        );
+        arrow.classList.remove("rotate");
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  });
 
   return (
     <div className="selectItem" ref={refOutside}>
