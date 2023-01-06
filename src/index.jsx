@@ -16,7 +16,6 @@ function SelectItem({ arrayProps, selectImg, selectClass }) {
   const [option, setOption] = useState("");
   const [selected, setSelected] = useState(false);
   const refOutside = useRef();
-  const list = document.querySelector(`.selectItem__${selectClass}__list`);
 
   /**
    * Const toggleArrow is used for rotating the icon,to indicates if the component is open or close.
@@ -46,7 +45,7 @@ function SelectItem({ arrayProps, selectImg, selectClass }) {
     if (selectClass === "state") {
       let handler = (event) => {
         if (!refOutside.current.contains(event.target)) {
-          const list = document.querySelector(`selectItem__state__list`);
+          const list = document.querySelector(`.selectItem__state__list`);
           list?.classList.add("hide");
           const arrow = document.querySelector(
             `.selectItem__state__field--img`
@@ -59,7 +58,7 @@ function SelectItem({ arrayProps, selectImg, selectClass }) {
     } else if (selectClass === "departement") {
       let handler = (event) => {
         if (!refOutside.current.contains(event.target)) {
-          const list = document.querySelector(`selectItem__departement__list`);
+          const list = document.querySelector(`.selectItem__departement__list`);
           list?.classList.add("hide");
           const arrow = document.querySelector(
             `.selectItem__departement__field--img`
