@@ -26,7 +26,7 @@ The generated project includes React and ReactDOM as dependencies. It also inclu
 ### for this librairy SelectItem
 
 ```
-npm install @squal94/librairyselectprojet14
+ npm install @squal94/selectcomponent14v7
 
 ```
 
