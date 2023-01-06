@@ -16,6 +16,7 @@ function SelectItem({ arrayProps, selectImg, selectClass }) {
   const [option, setOption] = useState("");
   const [selected, setSelected] = useState(false);
   const refOutside = useRef();
+  const list = document.querySelector(`.selectItem__${selectClass}__list`);
 
   /**
    * Const toggleArrow is used for rotating the icon,to indicates if the component is open or close.
