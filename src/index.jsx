@@ -42,35 +42,20 @@ function SelectItem({ arrayProps, selectImg, selectClass }) {
    */
 
   useEffect(() => {
-    if (selectClass === "state") {
-      let handler = (event) => {
-        if (!refOutside.current.contains(event.target)) {
-          const list = document.querySelector(`.selectItem__state__list`);
-          list?.classList.add("hide");
-          const arrow = document.querySelector(
-            `.selectItem__state__field--img`
-          );
-          arrow.classList.remove("rotate");
-        }
-      };
-      document.addEventListener("mousedown", handler);
-      return () => document.removeEventListener("mousedown", handler);
-    } else if (selectClass === "departement") {
-      let handler = (event) => {
-        if (!refOutside.current.contains(event.target)) {
-          const list = document.querySelector(`.selectItem__departement__list`);
-          list?.classList.add("hide");
-          const arrow = document.querySelector(
-            `.selectItem__departement__field--img`
-          );
-          arrow.classList.remove("rotate");
-        } else {
-          return console.log("erreur");
-        }
-      };
-      document.addEventListener("mousedown", handler);
-      return () => document.removeEventListener("mousedown", handler);
-    }
+    let handler = (event) => {
+      if (!refOutside.current.contains(event.target)) {
+        const list = document.querySelector(
+          `.selectItem__${selectClass}__list`
+        );
+        list?.classList.add("hide");
+        const arrow = document.querySelector(
+          `.selectItem__${selectClass}__field--img`
+        );
+        arrow.classList.remove("rotate");
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
   });
 
   return (
