@@ -1,8 +1,9 @@
 {
-  "name": "@squal94/librairyselectprojet14",
+  "name": "@squal94/selectcomponent14",
   "version": "1.0.0",
   "description": "creation d'une library avec un composant react select",
   "main": "dist/index.js",
+  "private": false,
   "module": "dist/index.js",
   "source": "src/index.jsx",
   "scripts": {
@@ -11,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Squal94/Khadir_Lounis_Projet_14_122022_LibrarySelect.git"
+    "url": "git+https://github.com/Squal94/Khadir_Lounis_Projet_14_122022_LibrarySelectv2.git"
   },
   "author": "Khadir L",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Squal94/Khadir_Lounis_Projet_14_122022_LibrarySelect/issues"
+    "url": "https://github.com/Squal94/Khadir_Lounis_Projet_14_122022_LibrarySelectv2/issues"
   },
-  "homepage": "https://github.com/Squal94/Khadir_Lounis_Projet_14_122022_LibrarySelect#readme",
+  "homepage": "https://github.com/Squal94/Khadir_Lounis_Projet_14_122022_LibrarySelectv2#readme",
   "peerDependencies": {
     "react": "^18.2.0"
   },
