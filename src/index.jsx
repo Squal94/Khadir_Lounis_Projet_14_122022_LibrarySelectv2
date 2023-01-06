@@ -36,7 +36,6 @@ function SelectItem({ arrayProps, selectImg, selectClass }) {
     list.classList.toggle("hide");
     toggleArrow();
   };
-
   /**
    * This feature allows you to click out of the component to close the list.
    */
